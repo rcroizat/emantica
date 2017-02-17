@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- picto -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<style>
+body,
+html {
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    height: 1200px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.empty,
+.dash,
+.table {
+    width: 45%;
+}
+
+.date{
+    margin: auto;
+    
+    text-align: center;
+}
+.input-field {
+    width: 150px;
+}
+
+.card .card-content .card-title {
+    display: inline;
+}
+
+.card-content a {
+    float: right;
+}
+</style>
+
+<body>
+    <nav class="nav-extended red darken-4">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent ">
+                <li class="tab"><a href="#">Test 1</a></li>
+                <li class="tab"><a class="active" href="#">Test 2</a></li>
+                <li class="tab disabled"><a href="#">Disabled Tab</a></li>
+                <li class="tab"><a href="#">Test 4</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="date">
+        <i class="material-icons">arrow_back</i>2017
+        <i class="material-icons">keyboard_arrow_right</i>
+    </div>
+    <div class="content">
+        <div class="dash">
+            <div class="input-field">
+                <select>
+                    <option value="" disabled selected>Toutes les agences</option>
+                    <option value="1">Brunoy</option>
+                    <option value="3">Massy</option>
+                    <option value="3">Meulan</option>
+                    <option value="3">Saint Michel</option>
+                </select>
+            </div>
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn-flat" href="#banque"><i class="material-icons right">report_problem</i>Montants changés (2)</a>
+            <br>
+            <!-- Modal Structure -->
+            <div id="banque" class="modal">
+                <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+            </div>
+            <a class="waves-effect waves-light btn  ">Client privilège</a>
+            <a class="waves-effect waves-light btn red darken-4 ">Simulation</a>
+            <a class="waves-effect waves-light btn red darken-4  ">Prospection</a>
+        </div>
+        <div class="empty"></div>
+        <div class="table">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">R1</span>
+                    <a class="btn-flat red-text text-darken-2">Cumul à date</a>
+                    <a class="btn-flat red-text text-darken-2 disabled">Top du mois</a>
+                </div>
+                <div class="card-tabs ">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab "><a class="active red-text text-darken-2" href="#test4">Nombre</a></li>
+                        <li class="tab"><a class="red-text text-darken-2" href="#test5">Nombre</a></li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <div id="test4">
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Name</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Janvier 2017 </th>
+                                    <th data-field="name">Cumul Janvier 2017</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Taux transformation 2017</th>
+                                    <th data-field="name">Taux transformation 2016</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MARTIN Cassandra</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>48</td>
+                                    <td>0</td>
+                                    <td>52 %</td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>BARRAS Bruno</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>37</td>
+                                    <td>43</td>
+                                    <td>64.85%</td>
+                                    <td>58.14%</td>
+                                </tr>
+                                <tr>
+                                    <td>BAATOUT Nadia</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                    <td>33</td>
+                                    <td>15</td>
+                                    <td>48.48%</td>
+                                    <td>40%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="test5">
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Name</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Janvier 2017 </th>
+                                    <th data-field="name">Cumul Janvier 2017</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Taux transformation 2017</th>
+                                    <th data-field="name">Taux transformation 2016</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MARTIN Cassandra</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>48</td>
+                                    <td>0</td>
+                                    <td>52 %</td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>BARRAS Bruno</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>37</td>
+                                    <td>43</td>
+                                    <td>64.85%</td>
+                                    <td>58.14%</td>
+                                </tr>
+                                <tr>
+                                    <td>BAATOUT Nadia</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                    <td>33</td>
+                                    <td>15</td>
+                                    <td>48.48%</td>
+                                    <td>40%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">R1</span>
+                    <a class="btn-flat red-text text-darken-2">Cumul à date</a>
+                    <a class="btn-flat red-text text-darken-2 disabled">Top du mois</a>
+                </div>
+                <div class="card-tabs ">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active red-text text-darken-2" href="#test14">Nombre</a></li>
+                        <li class="tab"><a class="red-text text-darken-2" href="#test15">Graphique</a></li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <div id="test14">
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Name</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Janvier 2017 </th>
+                                    <th data-field="name">Cumul Janvier 2017</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Taux transformation 2017</th>
+                                    <th data-field="name">Taux transformation 2016</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MARTIN Cassandra</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>48</td>
+                                    <td>0</td>
+                                    <td>52 %</td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>BARRAS Bruno</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>37</td>
+                                    <td>43</td>
+                                    <td>64.85%</td>
+                                    <td>58.14%</td>
+                                </tr>
+                                <tr>
+                                    <td>BAATOUT Nadia</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                    <td>33</td>
+                                    <td>15</td>
+                                    <td>48.48%</td>
+                                    <td>40%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="test15">
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Name</th>
+                                    <th data-field="name">Total R1 Janvier 2016</th>
+                                    <th data-field="name">Total R1 Janvier 2017 </th>
+                                    <th data-field="name">Total R1 Cumul Janvier 2017</th>
+                                    <th data-field="name">Total R1 Janvier 2016</th>
+                                    <th data-field="name">Taux transformation 2017</th>
+                                    <th data-field="name">Taux transformation 2016</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">R1</span>
+                    <a class="btn-flat red-text text-darken-2">Cumul à date</a>
+                    <a class="btn-flat red-text text-darken-2 disabled">Top du mois</a>
+                </div>
+                <div class="card-tabs ">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#test24">Nombre</a></li>
+                        <li class="tab"><a href="#test25">Graphique</a></li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <div id="test24">
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Name</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Janvier 2017 </th>
+                                    <th data-field="name">Cumul Janvier 2017</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Taux transformation 2017</th>
+                                    <th data-field="name">Taux transformation 2016</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MARTIN Cassandra</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>48</td>
+                                    <td>0</td>
+                                    <td>52 %</td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>BARRAS Bruno</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>37</td>
+                                    <td>43</td>
+                                    <td>64.85%</td>
+                                    <td>58.14%</td>
+                                </tr>
+                                <tr>
+                                    <td>BAATOUT Nadia</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                    <td>33</td>
+                                    <td>15</td>
+                                    <td>48.48%</td>
+                                    <td>40%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="test25">
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Name</th>
+                                    <th data-field="name">Total R1 Janvier 2016</th>
+                                    <th data-field="name">Total R1 Janvier 2017 </th>
+                                    <th data-field="name">Total R1 Cumul Janvier 2017</th>
+                                    <th data-field="name">Total R1 Janvier 2016</th>
+                                    <th data-field="name">Taux transformation 2017</th>
+                                    <th data-field="name">Taux transformation 2016</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">R1</span>
+                    <a class="btn-flat red-text text-darken-2">Cumul à date</a>
+                    <a class="btn-flat red-text text-darken-2 disabled">Top du mois</a>
+                </div>
+                <div class="card-tabs ">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#test34">Nombre</a></li>
+                        <li class="tab"><a href="#test35">Graphique</a></li>
+                    </ul>
+                </div>
+                <div class="card-content">
+                    <div id="test34">
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Name</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Janvier 2017 </th>
+                                    <th data-field="name">Cumul Janvier 2017</th>
+                                    <th data-field="name">Janvier 2016</th>
+                                    <th data-field="name">Taux transformation 2017</th>
+                                    <th data-field="name">Taux transformation 2016</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MARTIN Cassandra</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                    <td>48</td>
+                                    <td>0</td>
+                                    <td>52 %</td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>BARRAS Bruno</td>
+                                    <td>5</td>
+                                    <td>8</td>
+                                    <td>37</td>
+                                    <td>43</td>
+                                    <td>64.85%</td>
+                                    <td>58.14%</td>
+                                </tr>
+                                <tr>
+                                    <td>BAATOUT Nadia</td>
+                                    <td>1</td>
+                                    <td>6</td>
+                                    <td>33</td>
+                                    <td>15</td>
+                                    <td>48.48%</td>
+                                    <td>40%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="test35">
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Name</th>
+                                    <th data-field="name">Total R1 Janvier 2016</th>
+                                    <th data-field="name">Total R1 Janvier 2017 </th>
+                                    <th data-field="name">Total R1 Cumul Janvier 2017</th>
+                                    <th data-field="name">Total R1 Janvier 2016</th>
+                                    <th data-field="name">Taux transformation 2017</th>
+                                    <th data-field="name">Taux transformation 2016</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Alvin</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                    <td>$0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                    <td>$3.76</td>
+                                </tr>
+                                <tr>
+                                    <td>Jonathan</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                    <td>$7.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('select').material_select();
+        $('.modal').modal();
+    });
+    </script>
+</body>
+
+</html>
